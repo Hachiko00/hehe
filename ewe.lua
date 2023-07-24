@@ -275,16 +275,12 @@ function fruitFarm()
 
         local pixel_coins = get_coins_in_area("Pixel Vault")
         for i, v in pairs(pixel_coins) do
-            attack_coin(i, newP)
+            attack_coin(v, newP)
             wait(0.05)
             wait_until_broken(i)
         end
 
-        -- getgenv().boothsnipe = false
-        -- loadstring(game:HttpGet("https://raw.githubusercontent.com/Muhammad6196/Project-WD/main/Mainstring.lua"))()
-
-
-        if GetOranges() >= 160 then
+        if GetOranges() >= 150 then
             break
         end
     end
