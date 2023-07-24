@@ -259,7 +259,12 @@ end
 
 function fruitFarm()
     FrTeleportToWorld("Pixel", "Pixel Vault")
-    wait(3)
+    wait(0.3)
+    Fire("Performed Teleport")
+    create_platform(3587.14, -38, 2456.29)
+    wait(0.1)
+    Teleport(3587.14, -35, 2456.29)
+    wait(2)
     while 1 do
         wait(1)
         PETS = Library.Save.Get().PetsEquipped
@@ -275,8 +280,8 @@ function fruitFarm()
             wait_until_broken(i)
         end
 
-        getgenv().boothsnipe = false
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Muhammad6196/Project-WD/main/Mainstring.lua"))()
+        -- getgenv().boothsnipe = false
+        -- loadstring(game:HttpGet("https://raw.githubusercontent.com/Muhammad6196/Project-WD/main/Mainstring.lua"))()
 
 
         if GetOranges() >= 190 then
