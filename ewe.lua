@@ -371,7 +371,7 @@ else
 	else
         wait(10)
         print("Attempting to send gems")
-        pcall(utomel)
+        --pcall(utomel)
 
 
         print("waiting for diamond mine to open!")
