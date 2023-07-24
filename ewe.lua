@@ -284,7 +284,7 @@ function fruitFarm()
         -- loadstring(game:HttpGet("https://raw.githubusercontent.com/Muhammad6196/Project-WD/main/Mainstring.lua"))()
 
 
-        if GetOranges() >= 190 then
+        if GetOranges() >= 160 then
             break
         end
     end
