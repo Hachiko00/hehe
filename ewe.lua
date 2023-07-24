@@ -329,9 +329,8 @@ function utomel()
         return Library.Network.Invoke("Send Mail", args)
     end
 
-    if Gems2 ~= 50000000000 then
-        SendMail(getgenv().Settings["Utomel Username"])
-    end
+    SendMail(getgenv().Settings["Utomel Username"])
+
     -- local function SendMail(username)
     --     local args = {
     --         Recipient = username,
@@ -371,7 +370,9 @@ else
 	else
         wait(10)
         print("Attempting to send gems")
-        --pcall(utomel)
+        if Library.Save.Get().Diamonds ~= 50000000000 then
+            pcall(utomel)
+        end
 
 
         print("waiting for diamond mine to open!")
