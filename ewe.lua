@@ -370,9 +370,9 @@ else
 	else
         wait(10)
         print("Attempting to send gems")
-        if Library.Save.Get().Diamonds ~= 50000000000 then
-            pcall(utomel)
-        end
+        -- if Library.Save.Get().Diamonds ~= 50000000000 then
+        --     pcall(utomel)
+        -- end
 
 
         print("waiting for diamond mine to open!")
