@@ -157,13 +157,9 @@ function getBalloonUID(zoneName)
 	end
 end
 function getServer()
-	local servers = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. tostring(game.PlaceId) .. '/servers/Public?sortOrder=Asc&limit=100')).data
+	local servers = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. tostring(game.PlaceId) .. '/servers/Public?sortOrder=Desc&limit=100')).data
 	local server = servers[Random.new():NextInteger(1, 100)]
-	if server then 
-    return server 
-  else 
-    return getServer()
-  end
+	if server then return server else return getServer() end
 end
 function getPresents() for i,v in pairs(Library.Save.Get().HiddenPresents) do 
 		if not v.Found and v.ID then 
